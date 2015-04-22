@@ -15,6 +15,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-haml'
+Plugin 'vim-scripts/vim-coffee-script'
+Plugin 'digitaltoad/vim-jade'
 "Plugin 'sjl/gundo.vim'
 
 " All of your Plugins must be added before the following line
@@ -53,6 +56,7 @@ set scrolloff=3 " 3 lines between cursor and top/bottom of screen
 set cursorline
 set relativenumber
 set number
+set ruler " Shows current mode, cursor position, on bottom status bar
 
 set autoindent " based on previous line
 set incsearch " search as you type
@@ -87,8 +91,8 @@ au BufNewFile,BufRead *.rabl set filetype=ruby
 au BufNewFile,BufRead *.less set filetype=scss
 
 " Enter => new line
-map <CR> o<Esc> 
-map <S-CR> O<Esc>
+nmap <C-j> o<Esc> 
+nmap <C-k> O<Esc>
 nmap <Space> i_<Esc>r
 
 " Quickly edit .vimrc
@@ -116,12 +120,12 @@ cmap Q q
 
 " The following lines make word wraping great
 " UPDATE I'm disabling these until it's a problem
-"set wrap
-"set linebreak
-"set nolist  " list disables linebreak
-"set textwidth=0
-"set wrapmargin=0
-"set formatoptions+=l
+set wrap
+set linebreak
+set nolist  " list disables linebreak
+set textwidth=0
+set wrapmargin=0
+set formatoptions+=l
 
 
 
