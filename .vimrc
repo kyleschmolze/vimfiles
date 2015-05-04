@@ -18,11 +18,20 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-haml'
 Plugin 'vim-scripts/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'skwp/greplace.vim'
 "Plugin 'sjl/gundo.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+"""""""""""""""""
+" PLUGIN SETTINGS
+"""""""""""""""""
+
+" greplace.vim, plz use ag not grep
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
 
 
 """"""""""
